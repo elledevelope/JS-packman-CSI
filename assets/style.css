@@ -16,13 +16,13 @@ body {
 }
 
 #playground{
-    height: 95vh;
-    width: 95vw;
+    height: 90vh;
+    width: 90vw;
     background-color: black;
     border: 40px solid blue;
 }
 
-#packman {
+#pacman {
     width: 100px;
     height: 100px;
     background-color: yellow;
@@ -37,5 +37,14 @@ body {
     border-radius: 50%;
     position: absolute;
     top: 20%;
+    left: 60%;
+}
+
+#mouth{
+    width: 40px;
+    height: 4px;
+    background-color: black;
+    position: absolute;
+    top: 65%;
     left: 60%;
 }
