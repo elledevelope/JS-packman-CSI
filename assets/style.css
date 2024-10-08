@@ -1,0 +1,41 @@
+/* * RESET
+{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+} */
+
+body {
+    margin: 0;
+}
+
+#playground{
+    height: 95vh;
+    width: 95vw;
+    background-color: black;
+    border: 40px solid blue;
+}
+
+#packman {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: relative;
+}
+
+#eye{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    left: 60%;
+}
