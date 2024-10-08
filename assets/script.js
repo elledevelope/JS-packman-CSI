@@ -8,21 +8,23 @@ console.log(posX, posY);
 window.addEventListener("keyup", function (e) { // e - means "event"
     switch (e.keyCode) {
         case 39: //droite
-        case 68: //D
-            // posX = posX + 50;
-            posX +=50;
+        case 68: //D            
+            posX += 50; // posX = posX + 50;
             pacman.style.transform = "translate(" + posX + "px, " + posY + "px)";
             break;
         case 37: //gauche
         case 81:
-            // posX = posX - 50;
-            posX -= 50;
+            if (posX > 0) {
+                posX -= 50;   // posX = posX - 50;
+            }
             pacman.style.transform = "translate(" + posX + "px, " + posY + "px)";
             break;
 
         case 38: //haut
         case 90: //Z
-            posY -= 50;
+            if (posY > 0) {
+                posY -= 50;
+            }
             pacman.style.transform = "translate(" + posX + "px, " + posY + "px)";
             break;
 
