@@ -7,6 +7,11 @@ let playground = document.getElementById("playground");
 let widthPlayground = playground.clientWidth;
 let heightPlayground = playground.clientWidth;
 
+const hammertime = new Hammer(playground);
+hammertime.on("pan", function (ev) {
+    console.log(ev);
+});
+
 //////////////////////////// -------------------------------------------------- 2nd solution :
 //-------------------------- declaration de fonction
 function movePacman(direction) {
