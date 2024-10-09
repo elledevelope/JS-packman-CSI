@@ -42,7 +42,7 @@ function movePacman(direction) {
 }
 
 
-//////////////////////////// -------------------------------------------------- 
+//////////////////////////// ----------------------- gestion clavier :
 window.addEventListener("keyup", function (e) { // e - means "event", 'window' represents "la navigateur"
     switch (e.keyCode) {
         case 39: //---------------- droite
