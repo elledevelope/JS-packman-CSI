@@ -6,11 +6,8 @@ let playground = document.getElementById("playground");
 // console.dir(playground);
 let widthPlayground = playground.clientWidth;
 let heightPlayground = playground.clientWidth;
+let hammertime = new Hammer(playground);
 
-const hammertime = new Hammer(playground);
-hammertime.on("pan", function (ev) {
-    console.log(ev);
-});
 
 //////////////////////////// -------------------------------------------------- 2nd solution :
 //-------------------------- declaration de fonction
@@ -69,6 +66,30 @@ window.addEventListener("keyup", function (e) { // e - means "event", 'window' r
 
         default:
             console.log(e.keyCode);
+            break;
+    }
+});
+
+
+//////////////////////////// ----------------------- gestion tactile :
+hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+
+hammertime.on("swipeleft swiperight swipeup swipedown", function (ev) {
+    // console.dir(ev.type);
+    switch (ev.type) {
+        case "swipeleft": //gauche
+            movePacman("gauche");
+            break;
+        case "swiperight": //droite
+            movePacman("droite");
+            break;
+        case "swipeup": //haut
+            movePacman("haut");
+            break;
+        case "swipedown": //bas
+            movePacman("bas");
+            break;
+        default:
             break;
     }
 });
